@@ -34,7 +34,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'json-schema', '~> 2.5'
   spec.add_runtime_dependency 'minitest', '~> 5.0'
-  spec.add_runtime_dependency 'hashie', '~> 3.3'
+  spec.add_runtime_dependency 'hashie', '~> 4.1'
 
   spec.add_development_dependency 'pry', '~> 0'
   spec.add_development_dependency 'rake', '~> 10.3'

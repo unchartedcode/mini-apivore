@@ -74,12 +74,12 @@ module MiniApivore
 
     # сюда можно поставить замену для загрузки из файла данных, а не из рельс.
     def load_swagger_doc!
-      @swagger = MiniApivore::Swagger.new(fetch_swagger!)
+      @swagger = MiniApivore::Swagger.quiet.new(fetch_swagger!)
     end
 
     def fetch_swagger!
       return @schema unless @schema.empty?
-      
+
       if File.exist?( swagger_path )
         JSON.parse( File.read(swagger_path) )
       else
